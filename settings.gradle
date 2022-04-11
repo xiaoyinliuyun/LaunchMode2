@@ -1,0 +1,2 @@
+rootProject.name = "LaunchMode2"
+include ':app'
