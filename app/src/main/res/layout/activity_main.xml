@@ -20,4 +20,34 @@
         android:onClick="onFirst"
         />
 
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开启Service"
+        android:onClick="onStartService"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="关闭Service"
+        android:onClick="onStopService"
+        />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="绑定Service"
+        android:onClick="onBindService"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="解绑Service"
+        android:onClick="onUnbindService"
+        />
+
 </LinearLayout>

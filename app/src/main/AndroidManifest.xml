@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.xiaoyinliuyun.launchmode2">
+    <!-- 声明权限 -->
+    <permission android:name="com.xiaoyinliuyun.launchmode2.pro" android:protectionLevel="normal"/>
+    <!-- 申请权限 -->
+    <uses-permission android:name="com.xiaoyinliuyun.launchmode2.pro" />
 
     <application
         android:allowBackup="true"
@@ -9,12 +13,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LaunchMode2">
+
+        <service
+            android:name=".ProService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":pro"/>
+
+        <!-- 进程B -->
         <activity android:name=".FirstActivity"
-            android:launchMode="singleTask"
-            android:allowTaskReparenting="false">
+            android:process=":pro">
             <intent-filter>
-                <action android:name="com.test.action.LAUNCH"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="com.test.action.LAUNCH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity">
