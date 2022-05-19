@@ -6,8 +6,11 @@ import android.content.ServiceConnection
 import android.os.*
 import android.util.Log
 import android.view.View
+import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
 import java.io.FileDescriptor
+import android.os.Bundle
+import java.lang.Thread.sleep
 
 class MainActivity : AppCompatActivity() {
     private val TAG = "MainActivity"
@@ -132,7 +135,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setTheme(R.style.Theme_LaunchMode2)
         setContentView(R.layout.activity_main)
+
+        sleep(2000)
         Log.i(TAG, "onCreate: ")
 
 

@@ -7,12 +7,13 @@
     <uses-permission android:name="com.xiaoyinliuyun.launchmode2.pro" />
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.LaunchMode2">
+        android:theme="@style/Theme.LaunchMode2.Launcher">
 
         <service
             android:name=".ProService"
