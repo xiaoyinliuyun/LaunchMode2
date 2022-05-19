@@ -17,7 +17,15 @@ android {
     }
 
     buildTypes {
+        debug {
+            buildConfigField "boolean", "DEBUG", "true" // release会对于生成一个false
+            buildConfigField "String", "Info0", "\"onlyDebug\"" // release没有配置时，无法正常编译release包
+            buildConfigField "String", "Info1", "\"你好\""
+            buildConfigField "String", "Info2", "\"世界\""
+        }
         release {
+            buildConfigField "String", "Info1", "\"hello\""
+            buildConfigField "String", "Info2", "\"world\""
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
