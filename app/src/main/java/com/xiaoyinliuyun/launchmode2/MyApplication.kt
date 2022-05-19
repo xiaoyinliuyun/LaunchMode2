@@ -3,6 +3,7 @@ package com.xiaoyinliuyun.launchmode2
 import android.app.Application
 import android.os.StrictMode
 import android.util.Log
+import java.lang.Thread.sleep
 
 private const val TAG = "MyApplication"
 
@@ -33,7 +34,8 @@ class MyApplication : Application() {
             Log.i(TAG, "onCreate: 未设置严苛模式")
             Log.i(TAG, "onCreate:${BuildConfig.Info0}  ${BuildConfig.Info1} ${BuildConfig.Info2}")
         }
-    }
 
+        sleep(500)
+    }
 
 }
